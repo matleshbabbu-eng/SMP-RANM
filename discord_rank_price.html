@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VIP Rank Price List</title>
+<style>
+:root{
+  --bg:#050611; --panel:#0b0e1d; --text:#f6f7ff; --muted:#a7acc5;
+  --cyan:#22d3ee; --purple:#8b5cf6; --pink:#ec4899; --gold:#facc15;
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text)}
+body{overflow-x:hidden}
+body:before,body:after{content:"";position:fixed;inset:auto;pointer-events:none;z-index:0}
+body:before{width:420px;height:420px;left:-120px;top:-100px;background:radial-gradient(circle,rgba(34,211,238,.22),transparent 68%);filter:blur(10px)}
+body:after{width:520px;height:520px;right:-180px;bottom:-180px;background:radial-gradient(circle,rgba(139,92,246,.25),transparent 68%);filter:blur(10px)}
+.root{min-height:100vh;background:linear-gradient(180deg,#050611 0%,#07091a 100%);padding:32px 16px 44px;position:relative;isolation:isolate}
+.lightning{position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.18;background:
+  linear-gradient(118deg,transparent 0 45%,rgba(255,255,255,.8) 45.15%,transparent 45.35% 100%),
+  linear-gradient(68deg,transparent 0 72%,rgba(34,211,238,.8) 72.1%,transparent 72.28% 100%);
+animation:flash 5s infinite}
+@keyframes flash{0%,92%,100%{opacity:.12}94%{opacity:.38}95%{opacity:.08}96%{opacity:.28}}
+.wrap{max-width:1100px;margin:auto;position:relative;z-index:1}
+.hero{text-align:center;margin-bottom:26px}
+.badge{display:inline-block;padding:7px 13px;border:1px solid rgba(34,211,238,.5);border-radius:999px;background:rgba(34,211,238,.08);color:#67e8f9;font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;box-shadow:0 0 24px rgba(34,211,238,.16)}
+h1{margin:14px 0 8px;font-size:clamp(34px,7vw,66px);line-height:.95;letter-spacing:-2px;text-transform:uppercase;text-shadow:0 0 14px rgba(34,211,238,.45),0 0 36px rgba(139,92,246,.35)}
+.subtitle{margin:0;color:var(--muted);font-size:15px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.card{position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.09);border-radius:18px;padding:20px;background:linear-gradient(145deg,rgba(17,20,39,.96),rgba(7,9,20,.96));box-shadow:0 12px 40px rgba(0,0,0,.35),inset 0 0 30px rgba(255,255,255,.018);transition:.25s transform,.25s box-shadow,.25s border-color}
+.card:hover{transform:translateY(-5px) scale(1.01);border-color:rgba(255,255,255,.24);box-shadow:0 18px 55px rgba(0,0,0,.48),0 0 30px var(--glow)}
+.card:before{content:"";position:absolute;left:-30%;top:-70%;width:70%;height:220%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.08),transparent);transform:rotate(25deg);animation:sweep 4.5s infinite}
+@keyframes sweep{0%,60%{left:-80%}100%{left:150%}}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;position:relative}
+.rank{font-size:22px;font-weight:950;letter-spacing:.8px}
+.num{font-size:12px;color:var(--muted);font-weight:800}
+.price{margin:14px 0 3px;font-size:38px;font-weight:950;letter-spacing:-1px;color:var(--accent);text-shadow:0 0 18px var(--glow)}
+.price small{font-size:15px;color:var(--muted);font-weight:700}
+.cool{font-size:13px;color:#d5d8e8}
+.bar{height:3px;margin-top:17px;border-radius:99px;background:linear-gradient(90deg,var(--accent),transparent);box-shadow:0 0 12px var(--glow)}
+.vip{--accent:#22d3ee;--glow:rgba(34,211,238,.45)}
+.doom{--accent:#a78bfa;--glow:rgba(167,139,250,.45)}
+.dark{--accent:#f43f5e;--glow:rgba(244,63,94,.45)}
+.royal{--accent:#facc15;--glow:rgba(250,204,21,.45)}
+.mortal{--accent:#fb923c;--glow:rgba(251,146,60,.45)}
+.hunter{--accent:#34d399;--glow:rgba(52,211,153,.45)}
+.shadow{--accent:#c084fc;--glow:rgba(192,132,252,.45)}
+.custom{--accent:#38bdf8;--glow:rgba(56,189,248,.45)}
+.custom{grid-column:span 2}
+.footer{text-align:center;margin-top:22px;color:#858ba8;font-size:12px}
+@media(max-width:680px){.grid{grid-template-columns:1fr}.custom{grid-column:span 1}.card{padding:17px}}
+</style>
+</head>
+<body>
+<main class="root">
+<div class="lightning"></div>
+<div class="wrap">
+<section class="hero">
+  <div class="badge">⚡ PREMIUM RANK STORE ⚡</div>
+  <h1>Rank Price List</h1>
+  <p class="subtitle">Price • Kit Cooldown • VIP Network</p>
+</section>
+<section class="grid">
+  <article class="card vip"><div class="top"><div class="rank">👑 VIP</div><div class="num">#01</div></div><div class="price">FREE</div><div class="cool">Kit cooldown: <b>1.5 days</b></div><div class="bar"></div></article>
+  <article class="card doom"><div class="top"><div class="rank">☠ DOOMSDAY</div><div class="num">#02</div></div><div class="price">₹79</div><div class="cool">Kit cooldown: <b>1.5 days</b></div><div class="bar"></div></article>
+  <article class="card dark"><div class="top"><div class="rank">🌑 DARK</div><div class="num">#03</div></div><div class="price">₹159</div><div class="cool">Kit cooldown: <b>2 days</b></div><div class="bar"></div></article>
+  <article class="card royal"><div class="top"><div class="rank">👑 ROYALTY</div><div class="num">#04</div></div><div class="price">₹270</div><div class="cool">Kit cooldown: <b>2 days</b></div><div class="bar"></div></article>
+  <article class="card mortal"><div class="top"><div class="rank">💀 MORTAL</div><div class="num">#05</div></div><div class="price">₹390</div><div class="cool">Kit cooldown: <b>2.5 days</b></div><div class="bar"></div></article>
+  <article class="card hunter"><div class="top"><div class="rank">🏹 HUNTER</div><div class="num">#06</div></div><div class="price">₹450</div><div class="cool">Kit cooldown: <b>2.5 days</b></div><div class="bar"></div></article>
+  <article class="card shadow"><div class="top"><div class="rank">🌌 SHADOW</div><div class="num">#07</div></div><div class="price">₹500</div><div class="cool">Kit cooldown: <b>3 days</b></div><div class="bar"></div></article>
+  <article class="card custom"><div class="top"><div class="rank">⚙ CUSTOM</div><div class="num">#08</div></div><div class="price">₹650</div><div class="cool">Kit cooldown: <b>3 days</b></div><div class="bar"></div></article>
+</section>
+<div class="footer">⚡ Lightning animated • Responsive • Discord-friendly design</div>
+</div>
+</main>
+</body>
+</html>
